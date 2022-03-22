@@ -55,9 +55,7 @@ public class StartServer {
         server.start();
         log.info("Server started at port {}", port);
         log.info("active plugins: {}", Container.getInstance().getActivePlugins());
-        log.info("模拟下订单，执行命令：curl -XPOST localhost:9090/order?type=isv");
-        log.info("模拟热加载，执行命令：curl localhost:9090/reload?plugin=isv");
-        log.info("Ready to accept requests!");
+        log.info("start success");
         server.join();
     }
 
