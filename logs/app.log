@@ -1,0 +1,78 @@
+ 2022-03-22 20:12:17,728 INFO  [com.example.cp.oms.StartServer] [52] Starting server at port 9090
+ 2022-03-22 20:12:18,763 INFO  [com.maoyang.enforce.runtime.registry.DDDBootstrap] [45] starting Spring, register DDD beans...
+ 2022-03-22 20:12:18,763 INFO  [com.maoyang.enforce.runtime.registry.RegistryFactory] [40] register Domain's ...
+ 2022-03-22 20:12:18,782 INFO  [com.maoyang.enforce.runtime.registry.RegistryFactory] [40] register DomainService's ...
+ 2022-03-22 20:12:18,810 INFO  [com.maoyang.enforce.runtime.registry.RegistryFactory] [40] register Specification's ...
+ 2022-03-22 20:12:18,816 INFO  [com.maoyang.enforce.runtime.registry.RegistryFactory] [40] register Step's ...
+ 2022-03-22 20:12:18,865 INFO  [com.maoyang.enforce.runtime.registry.RegistryFactory] [40] register DomainAbility's ...
+ 2022-03-22 20:12:18,900 INFO  [com.maoyang.enforce.runtime.registry.RegistryFactory] [40] register Policy's ...
+ 2022-03-22 20:12:18,901 INFO  [com.maoyang.enforce.runtime.registry.RegistryFactory] [40] register Partner's ...
+ 2022-03-22 20:12:18,903 INFO  [com.example.bp.oms.isv.IsvPartner] [19] ISV new instanced, cl:sun.misc.Launcher$AppClassLoader@18b4aac2
+ 2022-03-22 20:12:18,908 INFO  [com.maoyang.enforce.runtime.registry.RegistryFactory] [40] register Pattern's ...
+ 2022-03-22 20:12:18,909 INFO  [com.maoyang.enforce.runtime.registry.RegistryFactory] [40] register Extension's ...
+ 2022-03-22 20:12:18,936 INFO  [com.maoyang.enforce.runtime.registry.DDDBootstrap] [47] all DDD beans registered, cost 174ms
+ 2022-03-22 20:12:18,950 INFO  [com.example.bp.oms.isv.aop.AutoLoggerAspect] [18] Spring created instance AutoLoggerAspect!
+ 2022-03-22 20:12:18,953 INFO  [com.example.bp.oms.isv.aop.AutoLoggerAspect] [23] AutoLoggerAspect 注册 Spring lifecycle ok
+ 2022-03-22 20:12:18,984 INFO  [com.maoyang.enforce.runtime.registry.DDDBootstrap] [55] Spring started complete!
+ 2022-03-22 20:12:18,984 INFO  [com.example.cp.oms.domain.StartupListener] [18] DDD framework booted!
+ 2022-03-22 20:12:18,984 INFO  [com.example.cp.oms.domain.StartupListener] [21] Domains:
+ 2022-03-22 20:12:18,984 INFO  [com.example.cp.oms.domain.StartupListener] [23]     订单核心域
+ 2022-03-22 20:12:18,984 INFO  [com.example.cp.oms.domain.StartupListener] [23]     资金额度支撑域
+ 2022-03-22 20:12:18,984 INFO  [com.example.cp.oms.domain.StartupListener] [26] Specifications:
+ 2022-03-22 20:12:18,985 INFO  [com.example.cp.oms.domain.StartupListener] [28]     产品项不能空
+ 2022-03-22 20:12:18,985 INFO  [com.example.cp.oms.domain.StartupListener] [31] Steps:
+ 2022-03-22 20:12:18,985 INFO  [com.example.cp.oms.domain.StartupListener] [33]     activity: cancelOrder
+ 2022-03-22 20:12:18,985 INFO  [com.example.cp.oms.domain.StartupListener] [35]         step: state, tags:[]
+ 2022-03-22 20:12:18,985 INFO  [com.example.cp.oms.domain.StartupListener] [35]         step: basic, tags:[]
+ 2022-03-22 20:12:18,986 INFO  [com.example.cp.oms.domain.StartupListener] [33]     activity: submitOrder
+ 2022-03-22 20:12:18,986 INFO  [com.example.cp.oms.domain.StartupListener] [35]         step: product, tags:[产品相关]
+ 2022-03-22 20:12:18,986 INFO  [com.example.cp.oms.domain.StartupListener] [35]         step: mq, tags:[]
+ 2022-03-22 20:12:18,986 INFO  [com.example.cp.oms.domain.StartupListener] [35]         step: presort, tags:[]
+ 2022-03-22 20:12:18,986 INFO  [com.example.cp.oms.domain.StartupListener] [35]         step: quota, tags:[]
+ 2022-03-22 20:12:18,986 INFO  [com.example.cp.oms.domain.StartupListener] [35]         step: persist, tags:[]
+ 2022-03-22 20:12:18,987 INFO  [com.example.cp.oms.domain.StartupListener] [35]         step: basic, tags:[]
+ 2022-03-22 20:12:18,987 INFO  [com.example.cp.oms.domain.StartupListener] [39] Extensions:
+ 2022-03-22 20:12:18,987 INFO  [com.example.cp.oms.domain.StartupListener] [41]     com.maoyang.enforce.ext.IDecideStepsExt: partners:[com.maoyang.enforce.runtime.registry.DomainArtifacts$Partner@cd07de33], patterns:[]
+ 2022-03-22 20:12:18,987 INFO  [com.example.cp.oms.domain.StartupListener] [41]     com.maoyang.enforce.ext.IModelAttachmentExt: partners:[com.maoyang.enforce.runtime.registry.DomainArtifacts$Partner@cd07de33], patterns:[]
+ 2022-03-22 20:12:18,987 INFO  [com.example.cp.oms.domain.StartupListener] [41]     com.example.cp.oms.spec.ext.ISerializableIsolationExt: partners:[com.maoyang.enforce.runtime.registry.DomainArtifacts$Partner@cd07de33], patterns:[]
+ 2022-03-22 20:12:19,559 INFO  [com.example.cp.oms.StartServer] [56] Server started at port 9090
+ 2022-03-22 20:12:19,560 INFO  [com.example.cp.oms.StartServer] [57] active plugins: {}
+ 2022-03-22 20:12:19,560 INFO  [com.example.cp.oms.StartServer] [58] 模拟下订单，执行命令：curl -XPOST localhost:9090/order?type=isv
+ 2022-03-22 20:12:19,560 INFO  [com.example.cp.oms.StartServer] [59] 模拟热加载，执行命令：curl localhost:9090/reload?plugin=isv
+ 2022-03-22 20:12:19,561 INFO  [com.example.cp.oms.StartServer] [60] Ready to accept requests!
+ 2022-03-22 20:13:09,461 INFO  [com.example.cp.oms.controller.financeController] [31] type=isv
+35820300513500 2022-03-22 20:13:09,477 INFO  [com.example.cp.oms.domain.ability.SerializableIsolationAbility] [36] key:carZoon0012:20200987655 expires:50 MINUTES
+35820300513500 2022-03-22 20:13:09,478 INFO  [com.example.cp.oms.infra.lock.RedisLock] [34] 这里通过 IRedisClient 实现分布式锁, LockEntry(key=20200987655, prefix=carZoon0012, timeUnit=MINUTES, leaseTime=50)
+35820300513500 2022-03-22 20:13:09,479 INFO  [com.example.cp.oms.infra.resource.BillRpc] [15] 预还款：89
+35820300513500 2022-03-22 20:13:09,480 INFO  [com.example.cp.oms.domain.service.SubmitBillOrderService] [44] steps [basic, presort, product, quota, persist, mq]
+35820300513500 2022-03-22 20:13:09,480 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.basic before:Order(source=isv, customer=carZoon0012)
+35820300513500 2022-03-22 20:13:09,481 INFO  [com.example.cp.oms.domain.activity.submitorder.BasicStep] [36] presorting...
+35820300513500 2022-03-22 20:13:09,481 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.presort before:Order(source=isv, customer=carZoon0012)
+35820300513500 2022-03-22 20:13:09,481 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.product before:Order(source=isv, customer=carZoon0012)
+35820300513500 2022-03-22 20:13:09,482 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.quota before:Order(source=isv, customer=carZoon0012)
+35820300513500 2022-03-22 20:13:09,482 INFO  [com.example.oms.d.quota.domain.service.QuotaService] [22] 会通过infrastructure层调用资金额度中心的RPC接口，执行预占资金额度动作
+35820300513500 2022-03-22 20:13:09,482 INFO  [com.example.oms.d.quota.domain.service.QuotaService] [23] 这里的逻辑，主要是根据不同业务场景组织资金额度中心RPC的入参，并对返回结果进行处理
+35820300513500 2022-03-22 20:13:09,482 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.persist before:Order(source=isv, customer=carZoon0012)
+35820300513500 2022-03-22 20:13:09,484 INFO  [com.example.bp.oms.isv.extension.CustomModelExt] [37] 账单联系人号码：139100988343，保存到x2字段
+35820300513500 2022-03-22 20:13:09,484 INFO  [com.example.cp.oms.infra.repository.FinanceRepository] [40] 落库：com.example.cp.oms.domain.model.OrderMainModel@43c3a21
+35820300513500 2022-03-22 20:13:09,484 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.mq before:Order(source=isv, customer=carZoon0012)
+35820300513500 2022-03-22 20:13:09,484 INFO  [com.example.cp.oms.infra.mq.MessageProducer] [19] 已经发送给MQ：com.example.cp.oms.domain.model.OrderMainModel@43c3a21
+35820300513500 2022-03-22 20:13:09,485 INFO  [com.example.cp.oms.domain.service.SubmitBillOrderService] [53] 提交完毕！
+ 2022-03-22 20:13:28,073 INFO  [com.example.cp.oms.controller.financeController] [31] type=isv
+35838912811500 2022-03-22 20:13:28,074 INFO  [com.example.cp.oms.domain.ability.SerializableIsolationAbility] [36] key:carZoon0012:20200987655 expires:50 MINUTES
+35838912811500 2022-03-22 20:13:28,074 INFO  [com.example.cp.oms.infra.lock.RedisLock] [34] 这里通过 IRedisClient 实现分布式锁, LockEntry(key=20200987655, prefix=carZoon0012, timeUnit=MINUTES, leaseTime=50)
+35838912811500 2022-03-22 20:13:28,075 INFO  [com.example.cp.oms.infra.resource.BillRpc] [15] 预还款：89
+35838912811500 2022-03-22 20:13:28,075 INFO  [com.example.cp.oms.domain.service.SubmitBillOrderService] [44] steps [basic, presort, product, quota, persist, mq]
+35838912811500 2022-03-22 20:13:28,075 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.basic before:Order(source=isv, customer=carZoon0012)
+35838912811500 2022-03-22 20:13:28,075 INFO  [com.example.cp.oms.domain.activity.submitorder.BasicStep] [36] presorting...
+35838912811500 2022-03-22 20:13:28,076 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.presort before:Order(source=isv, customer=carZoon0012)
+35838912811500 2022-03-22 20:13:28,076 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.product before:Order(source=isv, customer=carZoon0012)
+35838912811500 2022-03-22 20:13:28,076 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.quota before:Order(source=isv, customer=carZoon0012)
+35838912811500 2022-03-22 20:13:28,076 INFO  [com.example.oms.d.quota.domain.service.QuotaService] [22] 会通过infrastructure层调用资金额度中心的RPC接口，执行预占资金额度动作
+35838912811500 2022-03-22 20:13:28,077 INFO  [com.example.oms.d.quota.domain.service.QuotaService] [23] 这里的逻辑，主要是根据不同业务场景组织资金额度中心RPC的入参，并对返回结果进行处理
+35838912811500 2022-03-22 20:13:28,077 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.persist before:Order(source=isv, customer=carZoon0012)
+35838912811500 2022-03-22 20:13:28,077 INFO  [com.example.bp.oms.isv.extension.CustomModelExt] [37] 账单联系人号码：139100988343，保存到x2字段
+35838912811500 2022-03-22 20:13:28,077 INFO  [com.example.cp.oms.infra.repository.FinanceRepository] [40] 落库：com.example.cp.oms.domain.model.OrderMainModel@1e7170fd
+35838912811500 2022-03-22 20:13:28,078 INFO  [com.example.cp.oms.domain.activity.SubmitBillOrderStepsExec] [19] step:submitOrder.mq before:Order(source=isv, customer=carZoon0012)
+35838912811500 2022-03-22 20:13:28,078 INFO  [com.example.cp.oms.infra.mq.MessageProducer] [19] 已经发送给MQ：com.example.cp.oms.domain.model.OrderMainModel@1e7170fd
+35838912811500 2022-03-22 20:13:28,078 INFO  [com.example.cp.oms.domain.service.SubmitBillOrderService] [53] 提交完毕！
