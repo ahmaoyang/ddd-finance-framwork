@@ -1,7 +1,6 @@
 package com.example.cp.oms.spec.resource;
 
 // 这是个RPC调用的示例
-// Redis、JDBC、MQ等资源，infrastructure jar里封装实现
 public interface IBillRpc {
 
     /**
