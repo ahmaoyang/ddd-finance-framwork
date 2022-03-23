@@ -10,10 +10,10 @@ import org.springframework.beans.factory.DisposableBean;
 /**
  * 业务前台（中台模块以外的处理）
  */
-@Partner(code = IsvPartner.CODE, name = "ISV业务前台")
+@Partner(code = IsvPartner.CODE, name = "业务前台")
 @Slf4j
 public class IsvPartner implements IIdentityResolver<IOrderMain>, DisposableBean {
-    public static final String CODE = "ISV";
+    public static final String CODE = "front";
 
     public IsvPartner() {
         log.info("ISV new instanced, cl:{}", this.getClass().getClassLoader());

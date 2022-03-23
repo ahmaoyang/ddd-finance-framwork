@@ -20,12 +20,12 @@ public class financeController {
     private SubmitBillOrderService submitBillOrderService;
 
     // 测试
-    // curl -XPOST localhost:9090/billOrder?type=isv
+    // curl -XPOST localhost:9090/billOrder?type=front
     @RequestMapping(value = "/billOrder", method = {RequestMethod.POST, RequestMethod.GET})
     @ResponseBody
     public String submitOrder(@RequestParam(required = false) String type) {
         if (type == null) {
-            type = "ISV"; // ISV by default
+            type = "front";
         }
 
         log.info("type={}", type);
@@ -49,7 +49,7 @@ public class financeController {
         // 调用domain service完成该
         submitBillOrderService.submit(model);
         // 业务前台的下单执行步骤：
-        // SerializableIsolationExt -> DecideStepsExt -> BasicStep(PresortExt) -> PersistStep(AssignOrderNoExt, CustomModelAbility) -> BroadcastStep
+        // SerializableIsolationExt -> DecideStepsExt -> BasicStep(PreHandleExt) -> PersistStep(AssignOrderNoExt, CustomModelAbility) -> BroadcastStep
         return "Order finished!";
     }
 

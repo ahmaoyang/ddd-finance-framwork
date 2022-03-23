@@ -15,6 +15,9 @@ import com.example.cp.oms.spec.model.IOrderMain;
 import javax.validation.constraints.NotNull;
 import java.util.Map;
 
+/**
+ * 在业务模块自定义的扩展点
+ */
 @Slf4j
 @Extension(code = IsvPartner.CODE, value = "isvCustomModel", name = "前台的订单个性化字段处理逻辑")
 public class CustomModelExt implements IModelAttachmentExt<IOrderMain> {
