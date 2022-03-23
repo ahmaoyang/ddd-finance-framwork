@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 /**
  *
  *
- * <p>错误码，在domain层是以异常形式抛出的，因为异常有穿透能力，方便研发使用</p>
+ * 错误码，在domain层是以异常形式抛出的，因为异常有穿透能力，方便研发使用
  */
 public class OrderException extends RuntimeException {
     /**
@@ -15,8 +15,8 @@ public class OrderException extends RuntimeException {
 
     /**
      * (业务前台)个性化消息.
-     * <p>
-     * <p>例如，业务前台要求它抛出的错误消息，中台不要再加工，要原封不动地输出</p>
+     *
+     * 例如，业务前台要求它抛出的错误消息，中台不要再加工，要原封不动地输出
      */
     protected String custom;
 

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-// 实际项目，可以使用MyBatis/Hibernate/JPA等
+// 实际项目，可以使用MyBatis（这里只是做个模拟）
 @Component
 public class MockOrderItemDao implements OrderItemDao {
 

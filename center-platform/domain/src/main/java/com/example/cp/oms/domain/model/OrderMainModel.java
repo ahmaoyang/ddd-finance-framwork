@@ -14,7 +14,7 @@ import com.example.cp.oms.spec.model.vo.IProductDelegate;
 import javax.validation.constraints.NotNull;
 
 /**
- * <p>注意：没有实现Serializable，因为它不会网络传递，也不会本地文件存储.</p>
+ * 注意：没有实现Serializable，因为它不会网络传递，也不会本地文件存储.
  */
 @Getter // 注意：没有@Setter，是为了封装，包含订单一致性
 @Slf4j

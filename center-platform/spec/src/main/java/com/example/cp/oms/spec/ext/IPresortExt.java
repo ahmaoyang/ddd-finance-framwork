@@ -7,8 +7,8 @@
 //
 ///**
 // * 预分拣扩展点.
-// * <p>
-// * <p>根据配送地址获取配送站点信息，进而获取波次配置</p>
+// *
+// * 根据配送地址获取配送站点信息，进而获取波次配置
 // */
 //public interface IPresortExt extends IDomainExtension {
 //

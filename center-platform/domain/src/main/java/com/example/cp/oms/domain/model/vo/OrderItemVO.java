@@ -7,7 +7,7 @@ import com.example.cp.oms.spec.model.vo.IOrderItem;
 /**
  * 订单项.
  *
- * <p>每个{@link OrderMainModel}包含多个订单项.</p>
+ * 每个{@link OrderMainModel}包含多个订单项.
  */
 @Data
 public class OrderItemVO implements IOrderItem {

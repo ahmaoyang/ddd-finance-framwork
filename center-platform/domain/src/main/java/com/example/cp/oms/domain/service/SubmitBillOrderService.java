@@ -39,7 +39,7 @@ public class SubmitBillOrderService implements IDomainService {
             throw new OrderException(OrderErrorReason.SubmitOrder.OrderConcurrentNotAllowed);
         }
 
-        // 不同场景下，执行步骤不同：通过扩展点实现业务的多态
+        // 不同场景下，执行编排步骤不同：通过扩展点实现业务的多态
         List<String> steps = DDD.findAbility(DecideStepsAbility.class).decideSteps(orderModel, Steps.SubmitOrder.Activity);
         log.info("steps {}", steps);
 
