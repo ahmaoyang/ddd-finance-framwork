@@ -1,5 +1,6 @@
 package com.example.cp.oms.domain.activity.submitorder;
 
+import com.example.cp.oms.domain.ability.PreHandleAbility;
 import com.example.cp.oms.domain.activity.SubmitOrderStep;
 import com.example.cp.oms.domain.model.OrderMainModel;
 import com.maoyang.enforce.annotation.Step;
@@ -25,16 +26,15 @@ public class BasicStep extends SubmitOrderStep {
         model.setStep(this.stepCode());
 
         // 动态决定后续步骤：决定后续步骤这个行为，也抽象为扩展点，不同场景进行实现，以实现动态步骤编排的业务多态性
-        List<String> revisedSteps = DDD.findAbility(ReviseStepsAbility.class).revisedSteps(model);
-        if (revisedSteps != null) {
-            log.info("重新编排步骤：{}", revisedSteps);
-
-            // 通过异常，来改变后续步骤
-            throw new ReviseStepsException().withSubsequentSteps(revisedSteps);
-        }
-
-        log.info("presorting...");
-        // DDD.findAbility(PresortAbility.class).presort(model);
+//        List<String> revisedSteps = DDD.findAbility(ReviseStepsAbility.class).revisedSteps(model);
+//        if (revisedSteps != null) {
+//            log.info("重新编排步骤：{}", revisedSteps);
+//
+//            // 通过异常，来改变后续步骤
+//            throw new ReviseStepsException().withSubsequentSteps(revisedSteps);
+//        }
+        //进行预处理能力(这个是基础步骤，更具业务需要添加  ，不需要可以不添加)
+        DDD.findAbility(PreHandleAbility.class).preHandle(model);
     }
 
     @Override
