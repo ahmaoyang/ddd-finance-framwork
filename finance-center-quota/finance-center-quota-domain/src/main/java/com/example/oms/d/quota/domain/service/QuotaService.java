@@ -24,6 +24,7 @@ public class QuotaService implements IQuotaService {
 
         for (IOrderItem item : orderMain.itemDelegate().getItems()) {
             // 生产环境，看到会批量调用，这里只是演示
+            /// rpc  //
             remoteQuotaRpc.doOccupy(item.getItem(), item.getQuantity());
         }
     }
